@@ -477,7 +477,7 @@ nb_actions=nb_actions,
 gamma=gamma,
 batch_size=batch_size,
 memory=memory,
-nb_steps_warmup=1000000,  # ALNE: Adding same number of warm-up steps as there is space in memory.
+nb_steps_warmup=50000,  # ALNE: Adding same number of warm-up steps as there is space in memory.
 target_model_update=1e2,
 policy=policy,
 processor=train_processor)
@@ -485,5 +485,5 @@ processor=train_processor)
 dqn.compile(Adam(lr=learning_rate), metrics=['mae'])
 
 dqn.processor = train_processor
-dqn.fit(train_env, nb_steps=1000000, nb_max_episode_steps=300, log_interval=10000, visualize=False, verbose=2)
+dqn.fit(train_env, nb_steps=2000000, nb_max_episode_steps=300, log_interval=10000, visualize=False, verbose=2)
 dqn.save_weights('model-rl', overwrite=True)
