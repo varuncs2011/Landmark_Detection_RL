@@ -1,4 +1,0 @@
-Total Pass:0
-Total Fail:0
-Total Wander:300
-Total MaxEpisodeReached:0
