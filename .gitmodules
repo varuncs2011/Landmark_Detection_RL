@@ -1,0 +1,3 @@
+[submodule "landmark-detection"]
+	path = landmark-detection
+	url = https://github.com/varuncs2011/landmark-detection.git
